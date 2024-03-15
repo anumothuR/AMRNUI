@@ -8,14 +8,20 @@ reusable compnents, pages, hook modules
 npm install react-native-am-ui
 ```
 
+For Yarn
+
+```sh
+yarn react-native-am-ui
+```
+
 ## Usage
 
 ```js
-import { multiply } from 'react-native-am-ui';
+import { AMTitleText } from 'react-native-am-ui';
 
 // ...
 
-const result = await multiply(3, 7);
+<AMTitleText title="Good Morning have a nice day" value="Fine. Want to work with you again" />
 ```
 
 ## Contributing
