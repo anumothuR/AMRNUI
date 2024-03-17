@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, SafeAreaView } from 'react-native';
-import { AMTitleText } from 'react-native-am-ui';
+import { AMTitleText, AMIndianStockSelectionText } from 'react-native-am-ui';
 
 export default function App() {
   return (
@@ -9,6 +9,11 @@ export default function App() {
       <AMTitleText
         title="Good Morning have a nice day"
         value="Fine. Want to work with you again"
+      />
+      <AMIndianStockSelectionText
+        title="Stock Name"
+        placeholder="Stock search"
+        value={''}
       />
     </SafeAreaView>
   );

@@ -150,5 +150,9 @@
       "module",
       "typescript"
     ]
+  },
+  "dependencies": {
+    "@react-native-cookies/cookies": "^6.2.1",
+    "axios": "^1.6.8"
   }
 }
