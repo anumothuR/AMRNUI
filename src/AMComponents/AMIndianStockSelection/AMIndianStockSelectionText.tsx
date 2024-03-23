@@ -7,12 +7,14 @@ interface AMIndianStockSelectionProps {
   title: string;
   value: string | null;
   placeholder: string;
+  onChangeText: (symbol: string) => void;
 }
 
 const AMIndianStockSelectionText: React.FC<AMIndianStockSelectionProps> = ({
   title,
   value,
   placeholder,
+  onChangeText,
 }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
@@ -42,6 +44,7 @@ const AMIndianStockSelectionText: React.FC<AMIndianStockSelectionProps> = ({
           onSelect={(company: Company) => {
             setSelectedCompany(company);
             setModalVisible(false);
+            onChangeText(company.symbol);
           }}
         />
       </Modal>

@@ -1,7 +1,12 @@
 import * as React from 'react';
 
 import { StyleSheet, SafeAreaView } from 'react-native';
-import { AMTitleText, AMIndianStockSelectionText } from 'react-native-am-ui';
+import {
+  AMTitleText,
+  AMIndianStockSelectionText,
+  AMBuySellButton,
+  TradeType,
+} from 'react-native-am-ui';
 
 export default function App() {
   return (
@@ -14,6 +19,12 @@ export default function App() {
         title="Stock Name"
         placeholder="Stock search"
         value={''}
+        onChangeText={(text) => console.log(text)}
+      />
+      <AMBuySellButton
+        onSelect={(type: TradeType) => {
+          console.log(type);
+        }}
       />
     </SafeAreaView>
   );
